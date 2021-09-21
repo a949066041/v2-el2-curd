@@ -1,8 +1,15 @@
 const StylelintPlugin = require('stylelint-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const path = require('path')
 
 module.exports = {
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '/examples'),
+      ui: path.resolve(__dirname, '../components')
+    }
+  },
   optimization: {
     minimize: true,
     minimizer: [
@@ -62,7 +69,8 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true
+              sourceMap: true,
+              additionalData: '@import "~ui/style/var.scss";'
             }
           }
         ]

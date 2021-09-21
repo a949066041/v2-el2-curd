@@ -19,9 +19,6 @@ const components = {
   },
   resolve: {
     mainFiles: ['index'],
-    alias: {
-      ui: path.resolve(__dirname, './components')
-    },
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.md'],
     modules: ['node_modules']
   },

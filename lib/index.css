@@ -1,6 +1,14 @@
 /*!*************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-2[0].rules[0].use[2]!./components/TipBlock/style.scss ***!
   \*************************************************************************************************************************************************************************************************/
-.tip-block {
-  color: red;
+.mx-tip-block {
+  position: relative;
+}
+.mx-tip-block::after {
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #409eff;
+  content: " ";
 }

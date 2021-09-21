@@ -16,7 +16,7 @@ module.exports = {
     mainFiles: ['index'],
     alias: {
       '@': path.resolve(__dirname, '/examples'),
-      ui: path.resolve(__dirname, './components')
+      '@s': path.resolve(__dirname, '/components/style')
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.md']
   },

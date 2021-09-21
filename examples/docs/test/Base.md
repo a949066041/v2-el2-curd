@@ -7,10 +7,12 @@
 <template>
   <div>
     <tip-block />
+    <el-button @click="hello">test</el-button>
   </div>
 </template>
 
 <script>
+import { hello } from '@/utils'
 export default {
   data() {
     return {
@@ -18,6 +20,9 @@ export default {
       bottom: 10,
     };
   },
+  methods: {
+    hello
+  }
 };
 </script>
 ```
