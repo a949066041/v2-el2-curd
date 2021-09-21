@@ -1,16 +1,10 @@
 <template>
-  <div>
-    <DemoSort>
-      <Target />
-      <Target />
-    </DemoSort>
-  </div>
+  <Layout />
 </template>
 
 <script>
-import Target from './demo/target'
-import DemoSort from './components/DemoSort.jsx'
+import Layout from './Layout'
 export default {
-  components: { DemoSort, Target }
+  components: { Layout }
 }
 </script>

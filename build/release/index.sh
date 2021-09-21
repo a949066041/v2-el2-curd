@@ -1,9 +1,12 @@
 #!/usr/bin/env sh
 set -e
 
-# git checkout master
-# git merge dev
+git add -A
+git commit -m 'build release'
+git push
 
-VERSION=`npx select-version-cli`
+npm version patch
 
-read -p "Releasing $VERSION - are you sure? (y/n)" -n 1 -r
+yarn build
+
+npm publish --registry http://localhost:4873/

@@ -8,14 +8,14 @@ const common = require('./webpack.common')
 const components = {
   mode: 'development',
   entry: {
-    app: './components/index.js'
+    index: './components/index.js'
   },
   output: {
     path: path.resolve(process.cwd(), './lib'),
     publicPath: '/dist/',
     filename: '[name].js',
     chunkFilename: '[id].js',
-    libraryTarget: 'commonjs2'
+    libraryTarget: 'umd'
   },
   resolve: {
     mainFiles: ['index'],

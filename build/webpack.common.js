@@ -1,6 +1,19 @@
 const StylelintPlugin = require('stylelint-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = {
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        parallel: true,
+        terserOptions: {
+          warnings: false
+        }
+      })
+    ]
+  },
   module: {
     rules: [
       {
@@ -39,9 +52,9 @@ module.exports = {
         ]
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(scss|css)$/,
         use: [
-          { loader: 'style-loader' },
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: { sourceMap: true }
@@ -55,30 +68,12 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
-        use: [
-          { loader: 'style-loader' },
-          {
-            loader: 'css-loader',
-            options: { sourceMap: true }
-          }
-        ]
-      },
-      {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]?[hash]'
         }
       }
-      // {
-      //   test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
-      //   loader: 'url-loader',
-      //   query: {
-      //     limit: 10000,
-      //     name: path.posix.join('static', '[name].[hash:7].[ext]')
-      //   }
-      // }
     ]
   },
   plugins: [
