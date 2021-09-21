@@ -53,7 +53,7 @@ export default {
     position: relative;
     display: inline-block;
     width: 100%;
-    margin: 0 0 16px;
+    margin: 15px 0 16px;
     border: 1px solid #ebedf0;
     border-radius: 2px;
     transition: all 0.2s;

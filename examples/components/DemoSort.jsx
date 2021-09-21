@@ -29,7 +29,7 @@ export default {
       }
     })
     return (
-      <el-row gutter={16}>
+      <el-row gutter={16} style={{ marginTop: '20px' }}>
         <el-col
           span={isSingleCol ? 24 : 12}
           class={isSingleCol ? 'code-boxes-col-1-1' : 'code-boxes-col-2-1'}

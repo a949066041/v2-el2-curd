@@ -6,8 +6,6 @@ const WebpackBar = require('webpackbar')
 
 const md = require('./markdown')
 
-const path = require('path')
-
 module.exports = {
   entry: {
     app: './examples/index.js'
@@ -15,8 +13,6 @@ module.exports = {
   resolve: {
     mainFiles: ['index'],
     alias: {
-      '@': path.resolve(__dirname, '/examples'),
-      '@s': path.resolve(__dirname, '/components/style')
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.md']
   },

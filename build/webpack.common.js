@@ -6,7 +6,7 @@ const path = require('path')
 module.exports = {
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, '/examples'),
+      '@': path.resolve(__dirname, '../components'),
       ui: path.resolve(__dirname, '../components')
     }
   },
