@@ -2,7 +2,7 @@
   "name": "v2-doc",
   "version": "1.0.6",
   "description": "",
-  "main": "lib/index.js",
+  "main": "lib/mx.js",
   "scripts": {
     "dev:docs": "webpack serve --config build/webpack.docs.js",
     "build:docs": "webpack --config build/webpack.docs.build.js",
