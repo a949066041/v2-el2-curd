@@ -1,5 +1,6 @@
 import TipBlock from './TipBlock'
 import MxTable from './Table'
+import './style/table/index.scss'
 
 export default {
   install(Vue) {

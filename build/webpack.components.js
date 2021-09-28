@@ -6,16 +6,14 @@ const path = require('path')
 const common = require('./webpack.common')
 
 const components = {
-  mode: 'development',
-  entry: {
-    index: './components/index.js'
-  },
+  mode: 'production',
+  entry: './components/index.js',
   output: {
     path: path.resolve(process.cwd(), './lib'),
-    publicPath: '/dist/',
-    filename: '[name].js',
-    chunkFilename: '[id].js',
-    libraryTarget: 'umd'
+    filename: 'mx.js',
+    library: 'mx',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
   resolve: {
     mainFiles: ['index'],
