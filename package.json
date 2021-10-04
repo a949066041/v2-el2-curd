@@ -3,6 +3,10 @@
   "version": "1.0.8",
   "description": "",
   "main": "lib/mx.js",
+  "files": [
+    "lib",
+    "components"
+  ],
   "scripts": {
     "dev:docs": "webpack serve --config build/webpack.docs.js",
     "build:docs": "webpack --config build/webpack.docs.build.js",
