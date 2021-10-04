@@ -1,6 +1,6 @@
 {
   "name": "v2-doc",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "main": "lib/mx.js",
   "files": [
