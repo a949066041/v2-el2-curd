@@ -69,8 +69,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true,
-              additionalData: '@import "~ui/style/var.scss";'
+              sourceMap: true
             }
           }
         ]

@@ -1,5 +1,3 @@
-import './style.scss'
-
 export default {
   name: 'TipBlock',
   functional: true,

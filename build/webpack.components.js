@@ -20,6 +20,20 @@ const components = {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.md'],
     modules: ['node_modules']
   },
+  externals: {
+    vue: {
+      root: 'Vue',
+      commonjs: 'vue',
+      commonjs2: 'vue',
+      amd: 'vue'
+    },
+    'element-ui': {
+      root: 'element-ui',
+      commonjs: 'element-ui',
+      commonjs2: 'element-ui',
+      amd: 'element-ui'
+    }
+  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css'

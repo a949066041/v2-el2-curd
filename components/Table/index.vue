@@ -23,7 +23,7 @@
         p10
       >
         <slot v-bind="{ height: config['height'] }" name="list">
-          <el-table
+          <Table
             ref="table"
             v-bind="$attrs"
             v-on="$listeners"
@@ -42,7 +42,7 @@
               :config="item"
               :slots="$scopedSlots[item.dataIndex]"
             />
-          </el-table>
+          </Table>
         </slot>
         <el-pagination
           v-if="pagination"
@@ -63,12 +63,13 @@
 </template>
 
 <script>
+import { Table } from 'element-ui'
 import ItemColumn from './ItemColumn'
 import { ALIGNS } from 'ui/utils/table'
 
 export default {
   name: 'MxTable',
-  components: { ItemColumn },
+  components: { ItemColumn, Table },
   props: {
     noSearch: {
       type: Boolean,
