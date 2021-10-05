@@ -2,7 +2,7 @@
   "name": "v2-doc",
   "version": "1.0.10",
   "description": "",
-  "main": "lib/mx.js",
+  "main": "lib/index.umd.js",
   "files": [
     "lib",
     "components"
