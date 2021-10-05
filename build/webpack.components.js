@@ -5,12 +5,25 @@ const { merge } = require('webpack-merge')
 const path = require('path')
 const common = require('./webpack.common')
 
+const glob = require('glob')
+const list = {}
+
+async function mapComponents(dirPath, list) {
+  const files = glob.sync(`${dirPath}/**/index.js`)
+  for (const file of files) {
+    const component = file.split(/[/.]/)[4]
+    list[component] = `${file}`
+  }
+}
+
+mapComponents('./components/lib', list)
+
 const components = {
   mode: 'production',
-  entry: './components/index.js',
+  entry: list,
   output: {
     path: path.resolve(process.cwd(), './lib'),
-    filename: 'mx.js',
+    filename: '[name].umd.js',
     library: 'mx',
     libraryTarget: 'umd',
     umdNamedDefine: true
