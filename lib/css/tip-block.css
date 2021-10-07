@@ -1,1 +1,1 @@
-.mx-tip-block{position:relative}.mx-tip-block::after{position:absolute;left:0;width:4px;height:100%;background-color:#4695fd;content:" "}
+.curd__tip-block{display:flex;align-items:center;margin:0}.curd__tip-block-title{font-weight:600;font-size:18px;border-width:5px;border-left-color:#4695fd;border-left-style:solid}
