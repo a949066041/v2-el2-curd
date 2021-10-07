@@ -1,0 +1,15 @@
+@import './mixins/var.scss';
+
+.curd__tip-block {
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  &-title {
+    font-weight: 600;
+    font-size: 18px;
+    border-width: 5px;
+    border-left-color: $--color-base;
+    border-left-style: solid;
+  }
+}

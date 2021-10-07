@@ -1,5 +1,8 @@
+import TipBlock from './TipBlock/index'
 
-const components = {}
+const components = {
+  TipBlock
+}
 
 const install = function(Vue) {
   if (install.installed) return

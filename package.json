@@ -1,8 +1,13 @@
 {
   "name": "v2-el-curd",
-  "version": "1.0.11",
+  "version": "1.0.0",
   "description": "",
   "main": "lib/index.umd.js",
+  "author": "wangsh",
+  "keywords": [
+    "vue",
+    "element-ui"
+  ],
   "files": [
     "lib"
   ],
@@ -22,8 +27,6 @@
     "vue": "^2.6.0",
     "vue-template-compiler": "^2.6.0"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.15.5",

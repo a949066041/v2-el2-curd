@@ -3,17 +3,30 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const routes = [
+// 基础模板
+const baseRouters = [
   {
     path: '/table',
-    component: () => import('../docs/table/index.vue')
+    component: () => import('../docs/TipBlock/index.vue'),
+    meta: { title: '提示块' }
   }
 ]
+
+const useRouters = [
+  {
+    path: '/',
+    component: () => import('../docs/Use/index.vue')
+  }
+]
+
+export {
+  baseRouters
+}
 
 export default new VueRouter({
   mode: 'history',
   fallback: false,
-  routes,
+  routes: [...useRouters, ...baseRouters],
   scrollBehavior: (to) => {
     if (to.hash) {
       return {

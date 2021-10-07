@@ -252,3 +252,10 @@
     margin-top: 40px;
   }
 }
+
+.language-shell,
+.language-javascript {
+  margin: 16px 0 !important;
+  padding: 12px 20px !important;
+  overflow: auto;
+}

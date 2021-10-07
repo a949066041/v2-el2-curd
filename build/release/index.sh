@@ -9,4 +9,4 @@ npm version patch
 
 yarn build
 
-npm publish --registry http://localhost:4873/
+npm publish

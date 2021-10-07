@@ -7,7 +7,7 @@
       <slot name="description" />
       <div class="code-box__meta-tools">
         <el-tooltip effect="dark" content="复制">
-          <i class="el-icon-document-copy"></i>
+          <i class="el-icon-document-copy" @click="handleCopyCode"></i>
         </el-tooltip>
         <el-tooltip effect="dark" content="代码" placement="top-start">
           <i class="el-icon-magic-stick" @click="codeExpand = !codeExpand"></i>
@@ -39,10 +39,22 @@ export default {
   methods: {
     getCode() {
       const { $slots } = this
-      console.log(this)
       return decodeURIComponent(
         escape(window.atob(($slots.code && $slots.code[0] && $slots.code[0].text) || ''))
       )
+    },
+    handleCopyCode() {
+      const oInput = document.createElement('input')
+      oInput.value = this.sourceCode
+      document.body.appendChild(oInput)
+      oInput.select()
+      document.execCommand('Copy')
+      oInput.className = 'oInput'
+      oInput.style.display = 'none'
+      this.$message({
+        message: '复制成功',
+        type: 'success'
+      })
     }
   }
 }

@@ -2,17 +2,20 @@
 
 ## Install
 ```shell
-npm install v2-el-curd -S
+npm install element-ui v2-el-curd -S
 ```
 
 ## Quick Start
 ``` javascript
 import Vue from 'vue'
+import ElementUI from 'element-ui'
 import ElCurd from 'v2-el-curd'
 
 Vue.use(ElCurd)
+Vue.use(ElementUI)
 
 // css
+import 'element-ui/lib/theme-chalk/index.css'
 import 'v2-el-curd/lib/css/index.css'
 
 // or
