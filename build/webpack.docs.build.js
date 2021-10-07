@@ -8,7 +8,7 @@ const config = {
   mode: 'production',
   output: {
     path: path.resolve(process.cwd(), './dist'),
-    publicPath: './',
+    publicPath: 'v2-el2-curd',
     filename: '[name].[hash:7].js'
   },
   plugins: [

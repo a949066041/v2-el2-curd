@@ -20,7 +20,8 @@
     "build": "yarn build:lib && npx gulp sass",
     "build:lib": "webpack --config build/webpack.components.js",
     "build:css": "npx gulp sass",
-    "release": "sh ./build/release/index.sh"
+    "release": "sh ./build/release/index.sh",
+    "release:docs": "sh ./build/release/docs.sh"
   },
   "peerDependencies": {
     "element-ui": "^2.15.0",
