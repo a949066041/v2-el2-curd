@@ -24,6 +24,7 @@ export {
 }
 
 export default new VueRouter({
+  base: '/v2-el2-curd',
   mode: 'history',
   fallback: false,
   routes: [...useRouters, ...baseRouters],
