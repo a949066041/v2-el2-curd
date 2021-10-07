@@ -24,7 +24,7 @@ const components = {
   output: {
     path: path.resolve(process.cwd(), './lib'),
     filename: '[name].umd.js',
-    library: 'mx',
+    library: 'el-curd',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },

@@ -1,11 +1,10 @@
 {
-  "name": "v2-doc",
+  "name": "v2-el-curd",
   "version": "1.0.11",
   "description": "",
   "main": "lib/index.umd.js",
   "files": [
-    "lib",
-    "components"
+    "lib"
   ],
   "scripts": {
     "dev:docs": "webpack serve --config build/webpack.docs.js",

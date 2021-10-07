@@ -1,10 +1,5 @@
-import TipBlock from './TipBlock'
-import Table from './Table'
 
-const components = {
-  TipBlock,
-  Table
-}
+const components = {}
 
 const install = function(Vue) {
   if (install.installed) return
