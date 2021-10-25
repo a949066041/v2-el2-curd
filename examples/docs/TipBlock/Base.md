@@ -5,6 +5,6 @@
 
 ```vue
 <template>
-  <tip-block tip="提示块" />
+  <tip-block title="测试" />
 </template>
 ```

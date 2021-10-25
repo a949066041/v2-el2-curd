@@ -1,15 +1,17 @@
 @import './mixins/var.scss';
 
-.curd__tip-block {
+.#{$c-prefix}__tip-block {
+  position: relative;
   display: flex;
-  align-items: center;
-  margin: 0;
+  color: #000;
+  font-weight: 800;
 
-  &-title {
-    font-weight: 600;
-    font-size: 18px;
-    border-width: 5px;
-    border-left-color: $--color-base;
-    border-left-style: solid;
+  &::after {
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: $--color-base;
+    content: ' ';
   }
 }

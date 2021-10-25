@@ -1,27 +1,32 @@
- export default {
-   functional: true,
-   name: 'TipBlock',
-   props: {
-     tip: {
+export default {
+  name: 'TipBlock',
+  functional: true,
+  props: {
+    tipStyle: {
+      type: Object,
+      default: () => ({})
+    },
+    title: {
       type: String,
       default: ''
-     },
-     color: {
-      type: String,
-      default: ''
-     },
-     size: {
+    },
+    bottom: {
+      type: Number,
+      default: 16
+    },
+    size: {
       type: String,
       default: '18px'
     }
-   },
-   render(h, context) {
-     const { tip, color, size } = context.props
-     return (
-       <blockquote class='curd__tip-block'>
-         <div pl10 class='curd__tip-block-title' style={{ borderLeftColor: color, fontSize: size }}>{ tip }</div>
-       </blockquote>
-     )
-   }
- }
- 
+  },
+  render(h, c) {
+    const { size, bottom, tipStyle } = c.props
+    return (
+      <div class='curd__tip-block' pl10 style={{
+        fontSize: size,
+        marginBottom: `${bottom}px`,
+        ...tipStyle
+      }}>{ c.props.title }</div>
+    )
+  }
+}

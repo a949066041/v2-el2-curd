@@ -6,6 +6,6 @@
 
 ```vue
 <template>
-  <tip-block tip="提示块2" color="red" size="20px" />
+  <tip-block title="提示块2" size="20px" :tipStyle="{ color: 'red' }" />
 </template>
 ```

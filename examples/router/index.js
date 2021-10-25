@@ -25,6 +25,7 @@ export {
 
 export default new VueRouter({
   mode: 'history',
+  base: 'v2-el2-curd',
   routes: [...useRouters, ...baseRouters],
   scrollBehavior: (to) => {
     if (to.hash) {
